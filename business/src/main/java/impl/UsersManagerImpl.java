@@ -1,8 +1,9 @@
 package impl;
 
 
-import com.truespot.openclassroom.model.model.Users;
-import com.truespot.openclassroom.truespotbusiness.contract.UsersManager;
+
+import contract.UsersManager;
+import model.Users;
 import org.springframework.stereotype.Component;
 
 @Component

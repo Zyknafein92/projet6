@@ -1,7 +1,8 @@
 package impl;
 
-import com.truespot.openclassroom.model.model.Spot;
-import com.truespot.openclassroom.truespotbusiness.contract.SpotManager;
+
+import contract.SpotManager;
+import model.Spot;
 import org.springframework.stereotype.Component;
 
 @Component

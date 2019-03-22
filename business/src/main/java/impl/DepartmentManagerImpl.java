@@ -1,13 +1,15 @@
 package impl;
 
 
+
 import contract.DepartmentManagner;
 import model.Department;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class DepartmentManagerImpl implements DepartmentManagner {
-
+   //TODO
     @Override
     public Department addDepartments(Department department) {
         return null;
@@ -17,9 +19,6 @@ public class DepartmentManagerImpl implements DepartmentManagner {
     public void saveDepartment(Department department) {
 
     }
-
     @Override
-    public void deleteDepartment(Long id) {
-
-    }
+    public void deleteDepartment(Long id) {}
 }

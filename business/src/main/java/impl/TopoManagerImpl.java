@@ -1,7 +1,8 @@
 package impl;
 
-import com.truespot.openclassroom.model.model.Topo;
-import com.truespot.openclassroom.truespotbusiness.contract.TopoManager;
+
+import contract.TopoManager;
+import model.Topo;
 import org.springframework.stereotype.Component;
 
 @Component

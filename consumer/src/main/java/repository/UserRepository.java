@@ -1,6 +1,7 @@
 package repository;
 
-import com.truespot.openclassroom.model.model.Users;
+
+import model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
