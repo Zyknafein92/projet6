@@ -2,11 +2,12 @@ package contract;
 
 import model.Department;
 
-public interface DepartmentManagner {
+
+public interface DepartmentManager {
 
     Department addDepartments(Department department);
 
     void saveDepartment(Department department);
 
-    void deleteDepartment(Long id);
+    void deleteDepartment(int number);
 }

@@ -10,7 +10,8 @@ import java.io.Serializable;
 @Table(name="spot")
 public class Spot implements Serializable {
 
-    private static final long serialVersionUID = -3746412473835952080L;
+private static final long serialVersionUID = -3746412473835952080L;
+
 
     @Id
     @OneToOne(mappedBy = "topo")

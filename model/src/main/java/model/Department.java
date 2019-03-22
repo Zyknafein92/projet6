@@ -6,11 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 
 @Entity
 @Table(name="department")
-public enum Department {
+public enum Department implements Serializable {
 
     Ain(1, "Ain"),
     Aisne(2, "Aisne"),
@@ -108,6 +109,10 @@ public enum Department {
     SeineSaintDenis(93, "Seine-Saint-Denis"),
     ValDeMarne(94, "Val-de-marne"),
     ValDOise(95, "Val-d'oise");
+
+
+    private static final long serialVersionUID = -3746412773885952080L;
+
 
     @Id
     @Column(name="deparment_number")
