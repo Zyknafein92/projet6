@@ -9,5 +9,5 @@ public interface DepartmentManager {
 
     void saveDepartment(Department department);
 
-    void deleteDepartment(int number);
+    void deleteDepartment(Long id);
 }
