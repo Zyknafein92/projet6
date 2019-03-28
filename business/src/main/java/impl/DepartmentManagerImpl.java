@@ -19,8 +19,7 @@ public class DepartmentManagerImpl extends ManagerImpl implements DepartmentMana
     }
 
     @Override
-    public void deleteDepartment(Long id) {
-        getDaoFactory().getDepartmentRepository().deleteById(id);
+    public void deleteDepartment(Long id) {getDaoFactory().getDepartmentRepository().deleteById(id);
     }
 
 }

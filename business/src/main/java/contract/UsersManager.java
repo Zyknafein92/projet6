@@ -3,6 +3,8 @@ package contract;
 
 import model.Users;
 
+import java.util.List;
+
 public interface UsersManager {
 
     Users addUsers(Users user);
@@ -10,4 +12,6 @@ public interface UsersManager {
     void saveUsers(Users user);
 
     void deleteUsers(Long Id);
+
+    List<Users> getuser();
 }

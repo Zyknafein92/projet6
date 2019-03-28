@@ -15,13 +15,4 @@ public interface DaoFactory {
      TopoRepository getTopoRepository();
      UserRepository getuserRepository();
 
-     void setAdminRepository(AdminRepository adminRepository);
-     void setAreaRepository(AreaRepository areaRepository);
-     void setClimbingRoad(ClimbingRoadRepository climbingRoadRepository);
-     void setClimbingRoadTypeRepository(ClimbingRoadTypeRepository climbingRoadTypeRepository);
-     void setDepartmentRepository(DepartmentRepository departmentRepository);
-     void setDifficultyRepository(DifficultyRepository difficultyRepository);
-     void setSpotRepository(SpotRepository spotRepository);
-     void setTopoRepository(TopoRepository topoRepository);
-     void setUserRepository(UserRepository userRepository);
 }

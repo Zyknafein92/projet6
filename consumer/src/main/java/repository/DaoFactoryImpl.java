@@ -63,48 +63,4 @@ public class DaoFactoryImpl implements DaoFactory {
         return userRepository;
     }
 
-    @Override
-    public void setAdminRepository(AdminRepository adminRepository) {
-
-    }
-
-    @Override
-    public void setAreaRepository(AreaRepository areaRepository) {
-
-    }
-
-    @Override
-    public void setClimbingRoad(ClimbingRoadRepository climbingRoadRepository) {
-
-    }
-
-    @Override
-    public void setClimbingRoadTypeRepository(ClimbingRoadTypeRepository climbingRoadTypeRepository) {
-
-    }
-
-    @Override
-    public void setDepartmentRepository(DepartmentRepository departmentRepository) {
-
-    }
-
-    @Override
-    public void setDifficultyRepository(DifficultyRepository difficultyRepository) {
-
-    }
-
-    @Override
-    public void setSpotRepository(SpotRepository spotRepository) {
-
-    }
-
-    @Override
-    public void setTopoRepository(TopoRepository topoRepository) {
-
-    }
-
-    @Override
-    public void setUserRepository(UserRepository userRepository) {
-
-    }
 }
