@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name="climbing_road_type")
+@Table(name="climbing_road_type",schema="public" )
 public enum  ClimbingRoadType implements Serializable {
 
     BLOC("Bouldering", "Bloc"),
@@ -20,9 +20,9 @@ public enum  ClimbingRoadType implements Serializable {
 
     @OneToOne
     private ClimbingRoad climbingRoad;
-    @Column(name="")
+    @Column(name="en")
     private String en;
-    @Column(name="")
+    @Column(name="fr")
     private String fr;
 
     ClimbingRoadType(String en, String fr) {

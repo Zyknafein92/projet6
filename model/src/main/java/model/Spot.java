@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Table(name="spot")
+@Table(name="spot", schema="public")
 public class Spot implements Serializable {
 
 private static final long serialVersionUID = -3746412473835952080L;

@@ -82,7 +82,6 @@
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.5.jre7" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.5.RELEASE" />
-          <element id="library" level="project" name="Maven: com.h2database:h2:1.4.197" />
         </element>
       </element>
       <element id="directory" name="META-INF">

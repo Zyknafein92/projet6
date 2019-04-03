@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="climbing_road")
+@Table(name="climbing_road", schema="public")
 public class ClimbingRoad implements Serializable {
 
     private static final long serialVersionUID = -4064657285722503024L;

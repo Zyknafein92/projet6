@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Table(name="department")
+@Table(name="department", schema="public")
 public enum Department implements Serializable {
 
     Ain(1, "Ain"),

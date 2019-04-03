@@ -15,6 +15,7 @@ import repository.UserRepository;
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableJpaRepositories
+
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class);

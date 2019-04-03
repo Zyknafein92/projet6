@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Table(name= "area")
+@Table(name= "area", schema="public")
 public class Area implements Serializable {
 
     private static final long serialVersionUID = 3404260602360441894L;

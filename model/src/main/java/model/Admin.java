@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name="admin")
+@Table(name="admin", schema="public")
 public class Admin implements Serializable {
 
     private static final long serialVersionUID = -4670821279364950300L;
