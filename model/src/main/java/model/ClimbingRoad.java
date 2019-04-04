@@ -1,8 +1,6 @@
 package model;
 
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -15,14 +13,19 @@ public class ClimbingRoad implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long climbing_road_id;
+
     @ManyToOne()
     private Area area;
+
     @Column(name="name")
     private String name;
+
     @Column(name="description")
     private String description;
+
     @Column(name="difficulty")
     private Difficulty difficulty;
+
     @Column(name="climbing_road_type")
     private ClimbingRoadType type;
 

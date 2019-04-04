@@ -1,10 +1,7 @@
 package model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -18,12 +15,15 @@ public enum  ClimbingRoadType implements Serializable {
     FREE("Free climbing","Escalade libre"),
     ClimbingRoadType("DeepWater","Escalade maritime");
 
+    @Id
     @OneToOne
     private ClimbingRoad climbingRoad;
     @Column(name="en")
     private String en;
     @Column(name="fr")
     private String fr;
+
+    ClimbingRoadType() {};
 
     ClimbingRoadType(String en, String fr) {
         this.en = en;

@@ -1,10 +1,7 @@
 package model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -13,12 +10,16 @@ public class Difficulty implements Serializable {
 
     private static final long serialVersionUID = -645706496535438905L;
 
+    @Id
     @OneToOne(mappedBy = "climbing_road")
     private ClimbingRoad climbingRoad;
+
     @Column(name="number")
     private int number;
+
     @Column(name="letter")
     private char letter;
+
     @Column(name="symbole")
     private char symbole;
 

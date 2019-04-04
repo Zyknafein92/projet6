@@ -1,10 +1,11 @@
 package model;
 
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
@@ -17,8 +18,8 @@ public class Area implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long area_id;
 
-    @OneToMany(mappedBy = "topo")
-    private Topo topo;
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Topo.class)
+    private List<Topo> topo;
 
     @Column(name="name")
     private String name;
@@ -31,7 +32,7 @@ public class Area implements Serializable {
     @Column(name="height")
     private int height;
 
-    public Area(Topo topo, String name, String description, String orientation, int roadNumber, int height) {
+    public Area(List<Topo> topo, String name, String description, String orientation, int roadNumber, int height) {
         this.topo = topo;
         this.name = name;
         this.description = description;
@@ -48,11 +49,11 @@ public class Area implements Serializable {
         this.area_id = area_id;
     }
 
-    public Topo getTopo() {
+    public List<Topo> getTopo() {
         return topo;
     }
 
-    public void setTopo(Topo topo) {
+    public void setTopo(List<Topo> topo) {
         this.topo = topo;
     }
 

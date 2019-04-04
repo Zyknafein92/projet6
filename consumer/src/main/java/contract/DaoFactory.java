@@ -1,8 +1,10 @@
 package contract;
 
 
+import org.springframework.context.annotation.ComponentScan;
 import repository.*;
 
+@ComponentScan
 public interface DaoFactory {
 
      AdminRepository getAdminRepository();

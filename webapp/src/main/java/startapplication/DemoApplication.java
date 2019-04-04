@@ -7,6 +7,7 @@ import impl.UsersManagerImpl;
 import model.Users;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import repository.UserRepository;
@@ -14,22 +15,24 @@ import repository.UserRepository;
 
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "repository")
+@EntityScan( basePackages = {"model"} )
+
 
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class);
     }
 
-  Users user = new Users("Paul",
-          "Pierre",
-          21,
-          "male",
-          "TitiWisiti",
-          "1234",
-          "pouletfermier@cocuou",
-          "12345678910",
-          false);
+    Users user = new Users("Paul",
+            "Pierre",
+            21,
+            "male",
+            "TitiWisiti",
+            "1234",
+            "pouletfermier@cocuou",
+            "12345678910",
+            false);
 
 
 

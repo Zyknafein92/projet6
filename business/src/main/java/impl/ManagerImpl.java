@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public abstract class ManagerImpl {
 
+
     private DaoFactory daoFactory;
 
     public DaoFactory getDaoFactory() {
