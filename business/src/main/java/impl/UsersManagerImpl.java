@@ -4,7 +4,9 @@ package impl;
 
 import contract.UsersManager;
 import model.Users;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import repository.UserRepository;
 
 import java.util.List;
 

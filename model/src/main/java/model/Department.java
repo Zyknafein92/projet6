@@ -2,13 +2,12 @@ package model;
 
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
-
+@AllArgsConstructor
 @Entity
 @Table(name="department", schema="public")
 public enum Department implements Serializable {
@@ -115,22 +114,11 @@ public enum Department implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="deparment_number")
     private int number;
 
     @Column(name="department_name")
     private String name;
 
-    Department(int number, String name){
-        this.number = number;
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Department{" +
-                "number=" + number +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

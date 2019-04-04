@@ -14,27 +14,12 @@ import repository.UserRepository;
 
 
 @SpringBootApplication
-@EnableJpaAuditing
 @EnableJpaRepositories(basePackages = "repository")
-@EntityScan( basePackages = {"model"} )
-
-
+@EntityScan( basePackages = "model" )
 public class DemoApplication {
+    
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class);
     }
-
-    Users user = new Users("Paul",
-            "Pierre",
-            21,
-            "male",
-            "TitiWisiti",
-            "1234",
-            "pouletfermier@cocuou",
-            "12345678910",
-            false);
-
-
-
 
 }

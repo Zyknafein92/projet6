@@ -1,8 +1,12 @@
 package model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+
+@Data
 @Entity
 @Table(name="admin", schema="public")
 public class Admin implements Serializable {
@@ -13,10 +17,7 @@ public class Admin implements Serializable {
     @OneToOne
     @JoinColumn(name = "user_id")
     private Users user;
-
-    protected Admin() {}
-
-    public Admin(Users user) {
-        this.user = user;
     }
-}
+
+
+

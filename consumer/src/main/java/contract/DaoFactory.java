@@ -17,4 +17,6 @@ public interface DaoFactory {
      TopoRepository getTopoRepository();
      UserRepository getuserRepository();
 
+     void setDifficultyRepository (DifficultyRepository difficultyRepository);
+
 }

@@ -2,10 +2,12 @@ package repository;
 
 
 import contract.DaoFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DaoFactoryImpl implements DaoFactory {
+
 
     private AdminRepository adminrepository;
     private AreaRepository arearepository;
@@ -63,4 +65,9 @@ public class DaoFactoryImpl implements DaoFactory {
         return userRepository;
     }
 
+    @Override
+    @Autowired
+    public void setDifficultyRepository(DifficultyRepository difficultyRepository) {
+        this.difficultyRepository = difficultyRepository;
+    }
 }

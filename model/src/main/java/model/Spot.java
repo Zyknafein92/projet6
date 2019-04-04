@@ -2,10 +2,12 @@ package model;
 
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+@Data
 @Entity
 @Table(name="spot", schema="public")
 public class Spot implements Serializable {
@@ -14,7 +16,8 @@ private static final long serialVersionUID = -3746412473835952080L;
 
 
     @Id
-    @OneToOne(mappedBy = "topo")
+    @OneToOne(mappedBy="topo")
+    @JoinColumn(name = "topo_id")
     private Topo topo;
 
     @Column(name="name")
@@ -33,83 +36,5 @@ private static final long serialVersionUID = -3746412473835952080L;
     private String nearestHospital;
     @Column(name="supply_comment")
     private String supplyComment;
-
-
-    protected Spot () {}
-
-    public Spot(String name, String description, String nearestCity, Boolean carAccess, Boolean carParking, String accessDescription, String nearestHospital, String supplyComment) {
-        this.name = name;
-        this.description = description;
-        this.nearestCity = nearestCity;
-        this.carAccess = carAccess;
-        this.carParking = carParking;
-        this.accessDescription = accessDescription;
-        this.nearestHospital = nearestHospital;
-        this.supplyComment = supplyComment;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getNearestCity() {
-        return nearestCity;
-    }
-
-    public void setNearestCity(String nearestCity) {
-        this.nearestCity = nearestCity;
-    }
-
-    public Boolean getCarAccess() {
-        return carAccess;
-    }
-
-    public void setCarAccess(Boolean carAccess) {
-        this.carAccess = carAccess;
-    }
-
-    public Boolean getCarParking() {
-        return carParking;
-    }
-
-    public void setCarParking(Boolean carParking) {
-        this.carParking = carParking;
-    }
-
-    public String getAccessDescription() {
-        return accessDescription;
-    }
-
-    public void setAccessDescription(String accessDescription) {
-        this.accessDescription = accessDescription;
-    }
-
-    public String getNearestHospital() {
-        return nearestHospital;
-    }
-
-    public void setNearestHospital(String nearestHospital) {
-        this.nearestHospital = nearestHospital;
-    }
-
-    public String getSupplyComment() {
-        return supplyComment;
-    }
-
-    public void setSupplyComment(String supplyComment) {
-        this.supplyComment = supplyComment;
-    }
 
 }
